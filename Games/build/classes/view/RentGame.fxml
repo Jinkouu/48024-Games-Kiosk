@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.cell.*?>
+<?import javafx.scene.image.*?>
+
+<VBox xmlns:fx="http://javafx.com/fxml" fx:controller="controller.RentGameController" spacing = "10">
+
+    <HBox alignment = "CENTER_LEFT">
+        <ImageView> <image> <Image url="@game_icon.png"/> </image> </ImageView>
+        <Label text = "Rent a Game" styleClass = "h1"/>
+    </HBox>
+    
+    <HBox alignment = "CENTER" spacing = "10">
+            <Label text = "Customer ID:"/>
+            <TextField text = "" fx:id = "idTf"/>
+            <Button text = "Select Customer" onAction = "#handleSelectCustomer" disable = "true" fx:id = "selectBtn"/>
+    </HBox>
+    
+    <HBox alignment="CENTER" >
+        <Label text = "Available Games" styleClass = "h2"/>
+    </HBox>
+    
+    <TableView prefWidth="800" prefHeight = "200" styleClass="list" fx:id="gamesAvailableTv">
+            <placeholder><Label text = "no results found."/></placeholder>
+            <columns>
+                <TableColumn text = "Title">
+                    <cellValueFactory><PropertyValueFactory property = "title"/></cellValueFactory>
+                </TableColumn>
+                <TableColumn text = "Year">
+                    <cellValueFactory><PropertyValueFactory property = "year"/></cellValueFactory>
+                </TableColumn>
+                <TableColumn text = "Genre">
+                    <cellValueFactory><PropertyValueFactory property = "genre"/></cellValueFactory>
+                </TableColumn>
+                <TableColumn text = "Price">
+                    <cellValueFactory><PropertyValueFactory property = "price"/></cellValueFactory>
+                </TableColumn>
+            </columns>
+        </TableView>
+    
+    <VBox alignment = "CENTER" spacing = "10">
+        <HBox alignment = "CENTER">
+            <Button text = "Rent Selected Game" onAction = "#handleRent" disable = "true" fx:id = "rentBtn"/>
+        </HBox>
+        
+        <Text text = "" fx:id = "resultTxt"/>
+    
+        <HBox alignment = "CENTER">
+            <Button text = "Close" onAction = "#handleClose" fx:id = "closeBtn"/>
+        </HBox>
+    </VBox>
+    
+    
+    
+    <stylesheets>
+            <URL value="@kiosk.css"/>
+        </stylesheets>
+</VBox>

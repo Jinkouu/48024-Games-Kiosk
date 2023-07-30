@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.control.cell.*?>
+
+<VBox xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.ShowGamesByGenreController" spacing = "10" prefWidth="800" >
+
+    <HBox alignment = "CENTER_LEFT">
+        <ImageView> <image> <Image url="@game_icon.png"/> </image> </ImageView>
+        <Label text = "Games by Genre" styleClass = "h1"/>
+    </HBox>
+    
+    <HBox alignment = "CENTER" spacing = "10">
+        <VBox spacing = "10">
+            <Label text = "Genres:" styleClass = "h2"/>
+            <ListView prefWidth = "200" prefHeight = "300" styleClass="list" items="${controller.catalogue.genres}" fx:id="allGenresLv">
+                <placeholder><Label text = "No results found."/></placeholder>
+            </ListView>
+            <Button text = "Display Games" onAction = "#handleDisplayGames" fx:id = "displayBtn"/>
+        </VBox>
+        
+        <VBox spacing = "10">
+            <Label text = "Games:" styleClass = "h2"/>
+            <TableView prefWidth="500" prefHeight = "300" styleClass="list" fx:id="gamesInGenreTv">
+            <placeholder><Label text = "No results found."/></placeholder>
+            <columns>
+                <TableColumn text = "Title">
+                    <cellValueFactory><PropertyValueFactory property = "title"/></cellValueFactory>
+                </TableColumn>
+                <TableColumn text = "Year">
+                    <cellValueFactory><PropertyValueFactory property = "year"/></cellValueFactory>
+                </TableColumn>
+                <TableColumn text = "Genre">
+                    <cellValueFactory><PropertyValueFactory property = "genre"/></cellValueFactory>
+                </TableColumn>
+                <TableColumn text = "Price">
+                    <cellValueFactory><PropertyValueFactory property = "price"/></cellValueFactory>
+                </TableColumn>
+            </columns>
+            </TableView>
+        </VBox>
+    </HBox>
+  
+    <HBox alignment = "CENTER">
+        <Button text = "Exit" onAction = "#closeWindow" fx:id = "closeBtn"/>
+    </HBox>
+  
+    <stylesheets>
+        <URL value="@kiosk.css"/>
+    </stylesheets>
+
+</VBox>

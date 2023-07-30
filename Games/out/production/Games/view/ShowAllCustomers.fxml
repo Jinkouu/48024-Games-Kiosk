@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.control.cell.*?>
+<?import javafx.scene.image.*?>
+
+<VBox xmlns:fx="http://javafx.com/fxml" fx:controller="controller.ShowAllCustomersController" spacing = "10">
+    <HBox alignment="CENTER_LEFT" >
+        <ImageView> <image> <Image url="@game_icon.png"/> </image> </ImageView>
+        <Label GridPane.columnIndex = "1" GridPane.rowIndex = "0" GridPane.columnSpan = "2" text = "All Customers" styleClass = "h1"/>
+    </HBox>
+        
+        <TableView prefWidth="800" styleClass="list" items="${controller.kiosk.customers}" fx:id="allCustomersTv">
+            <placeholder><Label text = "No results found."/></placeholder>
+            <columns>
+                <TableColumn text = "ID">
+                    <cellValueFactory><PropertyValueFactory property = "id"/></cellValueFactory>
+                </TableColumn>
+                <TableColumn text = "Name">
+                    <cellValueFactory><PropertyValueFactory property = "name"/></cellValueFactory>
+                </TableColumn>
+                <TableColumn text = "Balance">
+                    <cellValueFactory><PropertyValueFactory property = "balance"/></cellValueFactory>
+                </TableColumn>
+            </columns>
+        </TableView>
+        
+        <HBox alignment = "CENTER">
+            <Button GridPane.rowIndex="2" GridPane.columnSpan="4" GridPane.halignment="CENTER" text = "Exit" onAction = "#closeWindow" fx:id = "closeBtn"/>
+        </HBox>
+    
+    
+    <stylesheets>
+        <URL value="@kiosk.css"/>
+    </stylesheets>
+
+</VBox>
+
+
+

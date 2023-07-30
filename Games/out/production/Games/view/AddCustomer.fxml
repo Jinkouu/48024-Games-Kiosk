@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.image.*?>
+
+<VBox xmlns:fx="http://javafx.com/fxml"
+      fx:controller="controller.AddCustomerController"
+      styleClass="root"
+      prefWidth="800.0"
+      spacing = "10"
+>
+    <HBox alignment = "CENTER_LEFT">
+        <ImageView> <image> <Image url="@game_icon.png"/> </image></ImageView>
+        <Label text = "Add Customer" styleClass = "h1"/>
+    </HBox>
+    
+    <GridPane hgap = "10" vgap="10" alignment="CENTER" >
+        <Label GridPane.columnIndex = "0" GridPane.rowIndex = "0" text = "ID:"/> 
+        <TextField GridPane.columnIndex = "1" GridPane.rowIndex = "0" fx:id = "idTf"/>
+
+        <Label GridPane.columnIndex = "0" GridPane.rowIndex = "1" text = "Name:"/> 
+        <TextField GridPane.columnIndex = "1" GridPane.rowIndex = "1" fx:id = "nameTf"/>
+
+        <Label GridPane.columnIndex = "0" GridPane.rowIndex = "2" text = "Balance:"/> 
+        <TextField GridPane.columnIndex = "1" GridPane.rowIndex = "2" fx:id = "balanceTf"/>
+    </GridPane> 
+    
+    <HBox alignment = "CENTER">
+        <Text text = "" fx:id = "resultTxt"/>
+    </HBox>
+    
+    <HBox alignment = "CENTER">
+        <Button text = "Add Customer" onAction = "#handleAddCustomer" fx:id = "AddCustomerBtn"/>
+    </HBox>
+        
+    <HBox alignment = "CENTER">
+        <Button text = "close" onAction = "#closeWindow" fx:id = "closeBtn"/>
+    </HBox>
+    
+    
+    
+    
+    
+   
+
+    <stylesheets>
+        <URL value="@kiosk.css"/>
+    </stylesheets>
+</VBox>

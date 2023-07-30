@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.image.*?>
+
+<VBox xmlns:fx="http://javafx.com/fxml"
+      fx:controller="controller.KioskController"
+      spacing = "10"
+      styleClass="root"
+      prefWidth="800.0"
+>
+    <HBox alignment="CENTER_LEFT" >
+        <ImageView> <image> <Image url="@game_icon.png"/> </image> </ImageView>
+        <Label text = "Game Kiosk" styleClass = "h1"/>
+    </HBox>
+    <HBox alignment="CENTER_RIGHT">
+        <Button text = "Administration" onAction = "#handleAdmin"/>
+    </HBox> 
+
+    <HBox alignment = "CENTER" spacing = "10">
+        <Button styleClass = "largeButton" prefHeight = "180" prefWidth = "180" 
+            text = "${'Explore\nCatalogue'}" fx:id = "exploreCatalogueBtn" onAction = "#handleCatalogue"/>
+        
+        <Button styleClass = "largeButton" prefHeight = "180" prefWidth = "180" 
+            text = "${'Customer\nRecord'}" fx:id = "customerRecordBtn" onAction = "#handleCustomerRecord"/>
+        
+        <Button styleClass = "largeButton" prefHeight = "180" prefWidth = "180" 
+            text = "${'Top-up\nAccount'}" fx:id = "topupAccountBtn" onAction = "#handleTopupAccount"/>
+        
+        <Button styleClass = "largeButton" prefHeight = "180" prefWidth = "180" 
+            text = "${'Favourite\nGames'}" fx:id = "favouriteGamesBtn" onAction = "#handleFavourites"/>
+    </HBox>
+    
+    <HBox alignment="CENTER">
+        <Button text = "Exit" onAction = "#exitButtonAction" fx:id = "ExitButton"/>
+    </HBox> 
+
+    <stylesheets>
+        <URL value="@kiosk.css"/>
+    </stylesheets>
+
+</VBox>

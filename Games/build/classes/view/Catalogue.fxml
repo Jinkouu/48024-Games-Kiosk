@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.image.*?>
+
+<VBox xmlns:fx="http://javafx.com/fxml"
+      fx:controller="controller.CatalogueController"
+      spacing = "10"
+      styleClass="root"
+      prefWidth="800.0"
+>
+    <HBox alignment = "CENTER_LEFT">
+        <ImageView> <image> <Image url="@game_icon.png"/> </image> </ImageView>
+        <Label text = "Catalogue" styleClass = "h1"/>
+    </HBox>
+    
+    <GridPane hgap = "10" vgap = "10"> 
+    
+        <VBox GridPane.columnIndex = "0" GridPane.rowIndex = "1" spacing = "10">
+            <Label text = "View Games:" styleClass = "h2"/>
+            <Button text = "All Games" styleClass = "menuButton" onAction = "#handleAllGames"/>
+            <Button text = "Available Games" styleClass = "menuButton" onAction = "#handleAvailableGames"/>
+            <Button text = "Games by Genre" styleClass = "menuButton" onAction = "#handleGamesByGenre"/>
+            <Button text = "Games by Year" styleClass = "menuButton" onAction = "#handleGamesByYear"/>
+        </VBox>
+
+        <Button styleClass = "largeButton" GridPane.columnIndex = "1" GridPane.rowIndex = "1" GridPane.rowSpan = "5" 
+                prefHeight = "180" prefWidth = "180" 
+                text = "${'Rent a\nGame'}" onAction = "#handleRentGames"/>
+        <Button styleClass = "largeButton" GridPane.columnIndex = "2" GridPane.rowIndex = "1" GridPane.rowSpan = "5" 
+                prefHeight = "180" prefWidth = "180" 
+                text = "${'Return a\nGame'}" onAction = "#handleReturnGames"/>
+
+        
+    </GridPane>
+    
+    <HBox alignment="CENTER">
+        <Button text = "Exit" onAction = "#exitButtonAction" fx:id = "exitButton"/>
+    </HBox> 
+    
+    <stylesheets>
+        <URL value="@kiosk.css"/>
+    </stylesheets>
+</VBox>

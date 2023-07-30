@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.image.*?>
+
+<VBox xmlns:fx="http://javafx.com/fxml" fx:controller="controller.AdminController">
+        <GridPane hgap="10" vgap = "10" styleClass="root" prefWidth="800.0"> 
+            <HBox GridPane.rowIndex="0" alignment="CENTER_LEFT" >
+                <ImageView > <image> <Image url="@game_icon.png"/> </image> </ImageView>
+                <Label text = "Administration Menu" styleClass = "h1"/>
+            </HBox>
+            
+            <HBox alignment="CENTER" GridPane.rowIndex="1" spacing = "10" prefWidth="800">
+                <VBox alignment = "CENTER_LEFT" spacing = "10">
+                    <Label text = "Manage Customers:" styleClass = "h2" alignment="CENTER_LEFT" />
+                    <Button text = "View All" styleClass = "menuButton" onAction = "#handleShowAllCustomers"/>
+                    <Button text = "Add" styleClass = "menuButton" onAction = "#handleAddCustomers"/>
+                    <Button text = "Remove" styleClass = "menuButton" onAction = "#handleRemoveCustomers"/>
+                </VBox>
+
+                <VBox alignment = "CENTER_LEFT" spacing = "10">
+                    <Label text = "Manage Games:" styleClass = "h2" />
+                    <Button text = "View All" styleClass = "menuButton" onAction = "#handleShowAllGames"/>
+                    <Button text = "Add" styleClass = "menuButton" onAction = "#handleAddGames"/>
+                    <Button text = "Remove" styleClass = "menuButton" onAction = "#handleRemoveGames"/>
+                </VBox>
+            </HBox>
+            
+            <HBox alignment = "CENTER" GridPane.rowIndex="2" prefWidth="800"  >
+                <Button text = "Exit" onAction = "#exitButtonAction"/>
+            </HBox>
+        </GridPane>
+
+        <stylesheets>
+            <URL value="@kiosk.css"/>
+        </stylesheets>
+</VBox>

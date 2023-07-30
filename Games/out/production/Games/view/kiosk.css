@@ -1,0 +1,86 @@
+/*
+ * Empty Stylesheet file.
+ */
+
+
+.root {
+    -fx-font-family: "Verdana";
+    -fx-padding: 10;
+    -fx-background-color: #f2f1f0;
+}
+
+.heading {
+    -fx-font-family: "Verdana";
+    -fx-font-size: 32px;   
+    -fx-text-fill: #2e64e2;
+
+}
+
+.h1 {
+    -fx-font-family: "Verdana";
+    -fx-font-size: 32px;   
+    -fx-text-fill: #2e64e2;
+
+}
+
+.h2 {
+    -fx-font-family: "Verdana";
+    -fx-font-size: 20px;
+    -fx-text-fill: #4d4b44;
+
+}
+
+
+.button {
+    -fx-font-family: "Verdana";
+    -fx-background-color: #4d4b44;
+    -fx-text-fill: white;
+}
+
+
+.button:hover {
+    -fx-font-family: "Verdana";
+    -fx-background-color: #2e94e2;
+    -fx-text-fill: white;
+}
+
+.largeButton {
+    -fx-font-family: "Verdana";
+    -fx-pref-width: 200px;
+    -fx-pref-height: 200px;
+    -fx-font-size: 28px;
+    -fx-background-color: white;
+    -fx-text-fill: #4d4b44;
+    -fx-border-color: #dedede;
+}
+
+
+.menuButton {
+    -fx-font-family: "Verdana";
+    -fx-pref-width: 200px;
+    -fx-background-color: white;
+    -fx-text-fill: #4d4b44;
+     -fx-border-color: #dedede;
+}
+
+.table-view{
+    -fx-border-color: #2e94e2;
+}
+
+.list-view{
+    -fx-border-color: #2e94e2;
+}
+
+.table-row-cell:selected {
+    -fx-background-color: #2e94e2;
+    -fx-text-fill: white;
+}
+
+.list-cell:selected {
+    -fx-background-color: #2e94e2;
+    -fx-text-fill: white;
+}
+
+*:focused {
+    -fx-focus-color: #2e94e2;
+}
