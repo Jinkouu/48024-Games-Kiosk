@@ -16,10 +16,10 @@ This project was made with Java.
 
 ## Screenshots
 
-<img src="./img/start.png" alt="start screen" align="center">
+<img src="./Img/start.png" alt="start screen" align="center">
 
-<img src="./img/gamesQuery.PNG.png" alt="start screen" align="center">
+<img src="./Img/gamesQuery.PNG.png" alt="start screen" align="center">
 
-<img src="./img/rentGame.PNG" alt="rent screen" align="center">
+<img src="./Img/rentGame.PNG" alt="rent screen" align="center">
 
-<img src="./img/customer.PNG" alt="customer screen" align="center">
+<img src="./Img/customer.PNG" alt="customer screen" align="center">
